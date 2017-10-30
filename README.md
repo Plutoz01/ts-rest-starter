@@ -3,9 +3,9 @@
 Aim of this project is to serve as starter for any future node.js REST API written with Typescript and some other cool stuff.
 
 ## Some (but not all ) cool stuff:
-1. Dependency Injection with `@Inject` and `@Autowired` decorators. See (typescript-ioc)[https://github.com/thiagobustamante/typescript-ioc] for more.
-2. Decorator based REST Controllers ( `@Path`, `@GET`, `@POST`, `@PUT`, `@DELETE`... )See (typescript-rest)[https://github.com/thiagobustamante/typescript-rest] for more.
-3. Swagger ( soon ). See (typescript-rest-swagger)[https://github.com/thiagobustamante/typescript-rest-swagger] for more.
+1. Dependency Injection with `@Inject` and `@Autowired` decorators. See [typescript-ioc](https://github.com/thiagobustamante/typescript-ioc) for more.
+2. Decorator based REST Controllers ( `@Path`, `@GET`, `@POST`, `@PUT`, `@DELETE`... )See [typescript-rest](https://github.com/thiagobustamante/typescript-rest) for more.
+3. Swagger ( soon ). See [typescript-rest-swagger](https://github.com/thiagobustamante/typescript-rest-swagger) for more.
 
 # Usage
 
