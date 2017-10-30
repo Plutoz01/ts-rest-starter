@@ -24,4 +24,5 @@ From now application runs on port 3000 and can serve requests, for example `GET 
 * Unified error handling
 * Tests
 * Configurable ( for ex. Port number )
+* Some header magic, like JWT token for auth
 * Errors give back some info based on sourceMap instead of generated js.

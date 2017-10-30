@@ -1,4 +1,5 @@
 import { Singleton } from 'typescript-ioc';
+import * as uuidv4 from 'uuid/v4';
 
 import { InMemoryRepositoryBase } from './base/in-memory-base.repository';
 import { User } from '../models/user.interface';
@@ -7,19 +8,26 @@ import { User } from '../models/user.interface';
 export class UserRepository extends InMemoryRepositoryBase<User, string> {
 
 	initializeData() {
-		this.items.set( '1',
+		let id = this.generateNewIdFor();
+		this.items.set( id,
 			<User> {
-				id: '1',
+				id: id,
 				userName: 'BobAwesome',
 				email: 'bob@awesome.com'
 			}
 		);
-		this.items.set( '2',
+
+		id = this.generateNewIdFor();
+		this.items.set( id,
 			<User> {
-				id: '2',
+				id: id,
 				userName: 'SteveWonderful',
 				email: 'steve@wonderful.com'
 			}
 		);
+	}
+
+	protected generateNewIdFor(): string {
+		return uuidv4();
 	}
 }
