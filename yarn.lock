@@ -132,7 +132,7 @@ are-we-there-yet@~1.1.2:
     delegates "^1.0.0"
     readable-stream "^2.0.6"
 
-argparse@^1.0.7:
+argparse@^1.0.7, argparse@^1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.9.tgz#73d83bc263f86e97f8cc4f6bae1b0e90a7d22c86"
   dependencies:
@@ -1913,6 +1913,10 @@ merge-stream@^1.0.0:
   dependencies:
     readable-stream "^2.0.1"
 
+merge@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
+
 methods@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
@@ -2955,7 +2959,20 @@ typescript-ioc@^1.0.2:
     reflect-metadata "^0.1.10"
     require-glob "^3.2.0"
 
-typescript-rest@^1.1.2:
+typescript-rest-swagger@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/typescript-rest-swagger/-/typescript-rest-swagger-0.0.12.tgz#dcbbc19407293dbaa11d6d9afca6712149bec286"
+  dependencies:
+    argparse "^1.0.9"
+    lodash "^4.17.4"
+    merge "^1.2.0"
+    mkdirp "^0.5.1"
+    path "^0.12.7"
+    typescript "^2.4.2"
+    typescript-rest "^1.1.0"
+    yamljs "^0.2.10"
+
+typescript-rest@^1.1.0, typescript-rest@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/typescript-rest/-/typescript-rest-1.1.2.tgz#0acbb86d7085eb827e9fc5f3c2d0c40f6b9dc010"
   dependencies:
@@ -2977,6 +2994,10 @@ typescript-rest@^1.1.2:
     require-glob "^3.2.0"
     swagger-ui-express "^1.0.7"
     yamljs "^0.2.10"
+
+typescript@^2.4.2:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.6.1.tgz#ef39cdea27abac0b500242d6726ab90e0c846631"
 
 typescript@^2.5.3:
   version "2.5.3"

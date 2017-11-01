@@ -22,7 +22,8 @@
     "gulp-clean": "^0.3.2",
     "gulp-nodemon": "^2.2.1",
     "gulp-typescript": "^3.2.3",
-    "typescript": "^2.5.3"
+    "typescript": "^2.5.3",
+    "typescript-rest-swagger": "^0.0.12"
   },
   "dependencies": {
     "express": "^4.16.2",
@@ -31,7 +32,7 @@
     "uuid": "^3.1.0"
   },
   "repository": {
-	"type": "git",
-	"url": "git+https://github.com/Plutoz01/ts-rest-starter.git"
+    "type": "git",
+    "url": "git+https://github.com/Plutoz01/ts-rest-starter.git"
   }
 }

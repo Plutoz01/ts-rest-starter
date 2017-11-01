@@ -20,6 +20,10 @@ Run command `npm run build`
 Run command `npm run serve`
 From now application runs on port 3000 and can serve requests, for example `GET localhost:3000/users`.
 
+## Generate swagger descriptions
+Install package [typescript-rest-swagger](https://github.com/thiagobustamante/typescript-rest-swagger) as global with command `npm install typescript-rest-swagger -g`.
+Run command `swaggerGen -c ./swaggerConfig.json` to generate. ( target directory: doc/swagger ).
+
 # TODO
 * Unified error handling
 * Tests

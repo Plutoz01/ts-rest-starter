@@ -1,0 +1,6 @@
+{
+  "swagger": {
+	"outputDirectory": "./doc/swagger",
+	"entryFile": "./src/controllers//index.ts"
+  }
+}
