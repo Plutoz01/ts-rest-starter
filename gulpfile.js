@@ -10,7 +10,7 @@ gulp.task( 'watch', [ 'scripts' ], function () {
 	gulp.watch( 'src/**/*.ts', [ 'scripts' ] )
 } );
 
-gulp.task( 'clean-scripts', function () {
+gulp.task( 'clean', function () {
 	return gulp.src( BUILD_DIRECTORY, { read: false } ).pipe( clean() );
 } );
 
