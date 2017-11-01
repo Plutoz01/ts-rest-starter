@@ -21,7 +21,6 @@ Run command `npm run serve`
 From now application runs on port 3000 and can serve requests, for example `GET localhost:3000/users`.
 
 # TODO
-* Unified error handling
 * Tests
 * Configurable ( for ex. Port number )
 * Some header magic, like JWT token for auth
