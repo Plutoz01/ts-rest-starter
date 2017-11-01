@@ -1,7 +1,9 @@
 import * as express from 'express';
+import * as logger from 'morgan';
 import { Server } from 'typescript-rest';
-
 import controllers from './controllers';
+
+import { handleError } from './error-handler';
 
 export class APIServer {
 
@@ -12,6 +14,8 @@ export class APIServer {
 	constructor() {
 		this.app = express();
 		this.config();
+
+		this.app.use( handleError );
 	}
 
 	/**
@@ -36,9 +40,11 @@ export class APIServer {
 	 * Configure the express app.
 	 */
 	private config(): void {
+		//enable logging
+		this.app.use( logger( 'common' ) );
+
 		Server.useIoC();
 		Server.buildServices( this.app, ...controllers );
 		// Server.swagger( this.app, './dist/swagger.json', '/api-docs', 'localhost:3000', [ 'http' ] );
 	}
-
 }

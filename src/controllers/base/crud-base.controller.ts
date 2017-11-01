@@ -18,7 +18,7 @@ export abstract class CrudControllerBase <T extends Identifiable<ID>, ID> {
 	async getById( @PathParam( 'entityId' ) id: ID ): Promise<T> {
 		const found = await this.repository.getById( id );
 		if ( !found ) {
-			throw new Errors.NotFoundError();
+			throw new Errors.NotFoundError( 'Entity does not exists' );
 		}
 		return found;
 	}
@@ -33,14 +33,18 @@ export abstract class CrudControllerBase <T extends Identifiable<ID>, ID> {
 	@PUT
 	@Path( ':entityId' )
 	async update( @PathParam( 'entityId' ) existingId: ID, entityToUpdate: T ): Promise<T> {
-		if ( !existingId ) {
-			throw new Errors.BadRequestError();
+		if ( !entityToUpdate ) {
+			throw new Errors.BadRequestError( 'Request body missing.' );
+		} else if ( !existingId ) {
+			throw new Errors.BadRequestError( 'Identifier of existing entity missing from url.' );
 		} else if ( entityToUpdate.id !== existingId ) {
-			throw new Errors.ConflictError();
+			throw new Errors.ConflictError(
+				`Identifier in url (${ existingId }) not match with identifier in body (${ entityToUpdate.id }).`
+			);
 		} else {
 			const found = this.getById( existingId );
 			if ( !found ) {
-				throw new Errors.NotFoundError();
+				throw new Errors.NotFoundError( 'Entity to update does not exists.' );
 			}
 			return this.repository.save( entityToUpdate );
 		}
@@ -51,7 +55,7 @@ export abstract class CrudControllerBase <T extends Identifiable<ID>, ID> {
 	async remove( @PathParam( 'entityId' ) id: ID ): Promise<void> {
 		const found = this.getById( id );
 		if ( !found ) {
-			throw new Errors.NotFoundError();
+			throw new Errors.NotFoundError( 'Entity does not exists' );
 		}
 		return this.repository.remove( id );
 	}

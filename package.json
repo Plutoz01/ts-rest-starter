@@ -25,13 +25,15 @@
     "typescript": "^2.5.3"
   },
   "dependencies": {
+    "@types/morgan": "^1.7.35",
     "express": "^4.16.2",
+    "morgan": "^1.9.0",
     "typescript-ioc": "^1.0.2",
     "typescript-rest": "^1.1.2",
     "uuid": "^3.1.0"
   },
   "repository": {
-	"type": "git",
-	"url": "git+https://github.com/Plutoz01/ts-rest-starter.git"
+    "type": "git",
+    "url": "git+https://github.com/Plutoz01/ts-rest-starter.git"
   }
 }
